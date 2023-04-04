@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Russo+One&display=swap');
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('./assets/fonts/digital-7.regular.ttf');
+ }
+:root {
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  --color-font: #0D1821;
+}
+  
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #AEDCC0;
+  color: var(--color-font);
+}
+  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  

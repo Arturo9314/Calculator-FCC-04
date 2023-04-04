@@ -1,0 +1,117 @@
+:root{
+  --border-color: #343E3D;
+  --color-1: #607466;
+  --color-2: #AEDCC0;
+  --color-3: #7BD389;
+  --color-4: #38E4AE;
+  --color-5: #44CCFF;
+  --color-6: #7494EA;
+}
+
+.calculator{
+  border: 3px solid var(--border-color);
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--color-3);
+  width: 320px;
+  position: relative;
+}
+.formulaScreen{
+  min-height: 20px;
+  font-size: 2rem;
+  color: orange;
+  vertical-align: text-top;
+  word-wrap: break-word;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 0.5rem;
+  padding: 0 0.75rem 0.5rem 0.75rem;
+}
+.outputScreen{
+  font-size: 2.5rem;
+  color: white;
+  word-wrap: break-word;
+  line-height: 35px;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 0.75rem 0.25rem 0.75rem;
+}
+
+.outputScreen, .formulaScreen{
+  /* width: 100%; */
+  font-family: 'digital-clock-font', sans-serif;
+  text-align: right;
+  background-color: var(--color-1);
+}
+
+.buttons{
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+  grid-template-areas: 
+    "a a b c"
+    "d e f g"
+    "h i j k"
+    "l m n q"
+    "o o p q"  
+  ;
+}
+
+.calculatorbtn{
+  position: relative;
+  height: 65px;
+  border-radius: 5px;
+  color: var(--border-color);
+  outline: 0.225rem solid var(--border-color);
+  border: none;
+  font-size: 2rem;
+  font-family: 'Delicious Handrawn', cursive;
+  cursor: pointer;
+  background: var(--color-2);
+  padding: 1px 6px;
+}
+.calculatorbtn:active{
+  background-color: rgb(144, 190, 162);
+}
+
+#clear{
+  grid-area: a;
+  width: 100%;
+  background-color: var(--color-4);
+}
+
+#clear:active{
+  background-color: rgb(26, 198, 144);
+}
+#zero{
+  grid-area: o;
+  width: 100%;
+}
+#equals{
+  grid-area: q;
+  height: 100%;
+  background-color: var(--color-5);
+}
+#equals:active{
+  background-color: rgb(38, 174, 225);
+}
+
+#multiply, #divide, #subtract, #add {
+  background-color: var(--color-6);
+}
+#multiply:active, #divide:active, #subtract:active, #add:active {
+   background-color: rgb(86, 118, 204);
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.75rem auto;
+}
+footer .author{
+  color: black;
+  width: 50%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
